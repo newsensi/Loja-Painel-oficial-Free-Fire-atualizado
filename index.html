@@ -1,3 +1,6 @@
+Freefire pro · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,9 +21,7 @@
             color: white;
             overflow-x: hidden;
         }
-
-        /* ... keep existing code */
-
+ 
         /* Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -66,7 +67,7 @@
                 border: 2px solid #fbbf24;
             }
         }
-
+ 
         .animate-float { animation: float 6s ease-in-out infinite; }
         .animate-pulse-slow { animation: pulse-slow 20s ease-in-out infinite; }
         .animate-pulse-scale { animation: pulse-scale 2s ease-in-out infinite; }
@@ -75,7 +76,7 @@
         .animate-slide-in { animation: slide-in 0.5s ease forwards; }
         .animate-neon-green { animation: neon-green 2s ease-in-out infinite; }
         .animate-neon-yellow { animation: neon-yellow 2s ease-in-out infinite; }
-
+ 
         /* Banner */
         .banner-verde {
             position: fixed;
@@ -91,14 +92,14 @@
             font-size: 14px;
             letter-spacing: 0.05em;
         }
-
+ 
         .banner-verde .destaque {
             color: white;
             font-weight: 900;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
-
-        /* Sales Counter - Draggable */
+ 
+        /* Sales Counter */
         .sales-counter {
             position: fixed;
             top: 72px;
@@ -120,25 +121,12 @@
             cursor: grab;
             user-select: none;
             -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
         }
-
-        .sales-counter.dragging {
-            cursor: grabbing;
-        }
-
-        .sales-counter .fire-icon {
-            color: #00ff41;
-            width: 14px;
-            height: 14px;
-        }
-
-        .sales-counter .count {
-            color: #00ff41;
-            font-variant-numeric: tabular-nums;
-        }
-
+ 
+        .sales-counter.dragging { cursor: grabbing; }
+        .sales-counter .fire-icon { color: #00ff41; width: 14px; height: 14px; }
+        .sales-counter .count { color: #00ff41; font-variant-numeric: tabular-nums; }
+ 
         /* Notifications */
         .notifications {
             position: fixed;
@@ -147,7 +135,7 @@
             z-index: 999;
             max-width: 320px;
         }
-
+ 
         .notification {
             background: #1a1a1a;
             border: 2px solid #00ff41;
@@ -159,7 +147,7 @@
             align-items: center;
             gap: 10px;
         }
-
+ 
         .notification-icon {
             width: 36px;
             height: 36px;
@@ -170,7 +158,7 @@
             justify-content: center;
             flex-shrink: 0;
         }
-
+ 
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -183,24 +171,22 @@
             position: relative;
             overflow: hidden;
         }
-
+ 
         .hero-bg {
             position: absolute;
             inset: 0;
             background: radial-gradient(ellipse at center, rgba(0, 255, 65, 0.1), transparent, transparent);
         }
-
+ 
         .hero-content {
             position: relative;
             z-index: 10;
             max-width: 1280px;
             margin: 0 auto;
         }
-
-        .logo-container {
-            margin-bottom: 32px;
-        }
-
+ 
+        .logo-container { margin-bottom: 32px; }
+ 
         .logo {
             width: 192px;
             max-width: 90%;
@@ -208,34 +194,27 @@
             margin: 0 auto;
             filter: drop-shadow(0 25px 25px rgba(0,0,0,0.3));
         }
-
+ 
         h1 {
             font-size: 3rem;
             font-weight: 900;
             margin-bottom: 24px;
             line-height: 1.1;
         }
-
+ 
         .text-neon {
             color: #00ff41;
             filter: drop-shadow(0 0 10px #00ff41) drop-shadow(0 0 20px #00ff41);
         }
-
+ 
         .text-neon-red {
             color: #ef4444;
             filter: drop-shadow(0 0 10px #ef4444) drop-shadow(0 0 20px #ef4444);
         }
-
-        .benefits {
-            font-size: 1.125rem;
-            color: #d1d5db;
-            margin-bottom: 32px;
-        }
-
-        .benefits p {
-            margin-bottom: 8px;
-        }
-
+ 
+        .benefits { font-size: 1.125rem; color: #d1d5db; margin-bottom: 32px; }
+        .benefits p { margin-bottom: 8px; }
+ 
         .user-counter {
             display: inline-flex;
             align-items: center;
@@ -246,7 +225,7 @@
             border-radius: 9999px;
             margin-bottom: 32px;
         }
-
+ 
         .video-placeholder {
             max-width: 896px;
             margin: 0 auto 32px;
@@ -256,30 +235,9 @@
             box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.2);
             transition: transform 0.5s;
         }
-
-        .video-placeholder:hover {
-            transform: scale(1.05);
-        }
-
-        .video-content {
-            aspect-ratio: 16/9;
-            background: linear-gradient(to bottom right, #111827, #000);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .play-button {
-            width: 80px;
-            height: 80px;
-            background: #00ff41;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
-
+ 
+        .video-placeholder:hover { transform: scale(1.05); }
+ 
         .cta-button {
             display: inline-block;
             background: linear-gradient(to right, #00ff41, #00e639);
@@ -294,17 +252,15 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-
-        .cta-button:hover {
-            transform: scale(1.1);
-        }
-
+ 
+        .cta-button:hover { transform: scale(1.1); }
+ 
         /* Features Section */
         .features {
             padding: 80px 16px;
             background: linear-gradient(to bottom, transparent, #0f0f0f);
         }
-
+ 
         .features-grid {
             max-width: 1280px;
             margin: 0 auto;
@@ -312,7 +268,7 @@
             grid-template-columns: 1fr;
             gap: 32px;
         }
-
+ 
         .feature-card {
             background: #1a1a1a;
             border: 1px solid #374151;
@@ -320,12 +276,12 @@
             padding: 32px;
             transition: all 0.5s;
         }
-
+ 
         .feature-card:hover {
             border-color: #00ff41;
             transform: translateY(-16px);
         }
-
+ 
         .feature-icon {
             width: 80px;
             height: 80px;
@@ -337,152 +293,144 @@
             justify-content: center;
             box-shadow: 0 10px 15px -3px rgba(0, 255, 65, 0.3);
         }
-
+ 
         .feature-card h3 {
             font-size: 1.5rem;
             font-weight: 900;
             margin-bottom: 16px;
             text-align: center;
         }
-
+ 
         .feature-card p {
             color: #9ca3af;
             text-align: center;
             line-height: 1.625;
         }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 64px 16px;
-        }
-
+ 
+        /* ========== TESTIMONIALS - NOVO CARROSSEL ========== */
+        .testimonials { padding: 64px 16px; }
+ 
         .testimonials h2 {
             font-size: 2.5rem;
             font-weight: 900;
             text-align: center;
             margin-bottom: 16px;
         }
-
+ 
         .testimonials-subtitle {
             color: #9ca3af;
             text-align: center;
             margin-bottom: 48px;
             font-size: 1.125rem;
         }
-
-        .testimonials-grid {
-            max-width: 1280px;
+ 
+        /* Carrossel wrapper */
+        .carousel-wrapper {
+            max-width: 480px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
+            position: relative;
         }
-
-        .testimonial-card {
-            background: #1a1a1a;
-            border: 2px solid rgba(0, 255, 65, 0.3);
-            border-radius: 16px;
+ 
+        .carousel-track-container {
             overflow: hidden;
-            transition: all 0.5s;
+            border-radius: 16px;
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.15);
+            background: #1a1a1a;
         }
-
-        .testimonial-card:hover {
-            border-color: #00ff41;
-            transform: translateY(-8px);
+ 
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-
-        .testimonial-card img {
+ 
+        .carousel-slide {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+ 
+        .carousel-slide img {
             width: 100%;
             height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        /* Fix testimonial images to consistent size */
-        .testimonial-card img {
-            width: 100%;
-            height: 500px;
+            max-height: 600px;
             object-fit: contain;
+            display: block;
             background: #1a1a1a;
-            display: block;
         }
-
-        @media (max-width: 767px) {
-            .testimonial-card img {
-                height: 400px;
-            }
-        }
-
-        /* Mobile Carousel */
-        .carousel-mobile {
-            display: block;
-        }
-
-        .carousel-desktop {
-            display: none;
-        }
-
-        .carousel-container {
-            position: relative;
-            margin-bottom: 24px;
-        }
-
-        .carousel-nav {
+ 
+        /* Botões nav */
+        .carousel-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             background: #00ff41;
             color: black;
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             border: none;
-            font-size: 32px;
+            font-size: 22px;
             font-weight: 900;
             cursor: pointer;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 10;
             line-height: 1;
         }
-
-        .carousel-nav:hover {
-            transform: translateY(-50%) scale(1.1);
+ 
+        .carousel-btn:hover {
+            transform: translateY(-50%) scale(1.12);
+            box-shadow: 0 6px 20px rgba(0,255,65,0.4);
         }
-
-        .carousel-nav.prev {
-            left: 8px;
+ 
+        .carousel-btn.prev { left: -22px; }
+        .carousel-btn.next { right: -22px; }
+ 
+        @media (max-width: 540px) {
+            .carousel-btn.prev { left: 4px; }
+            .carousel-btn.next { right: 4px; }
         }
-
-        .carousel-nav.next {
-            right: 8px;
-        }
-
+ 
+        /* Dots */
         .carousel-dots {
             display: flex;
             justify-content: center;
-            gap: 8px;
-            margin-top: 24px;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 20px;
         }
-
+ 
         .carousel-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: #4b5563;
             border: none;
             cursor: pointer;
             transition: all 0.3s;
+            padding: 0;
         }
-
+ 
         .carousel-dot.active {
             background: #00ff41;
-            width: 32px;
-            border-radius: 6px;
+            width: 28px;
+            border-radius: 5px;
         }
-
+ 
+        /* Contador de slides */
+        .carousel-counter {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+ 
+        .carousel-counter span { color: #00ff41; font-weight: 700; }
+ 
+        /* Stats card */
         .stats-card {
             background: linear-gradient(to bottom right, #00ff41, #00e639);
             border-radius: 16px;
@@ -492,47 +440,30 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-top: 24px;
+            margin-top: 32px;
         }
-
-        .stats-number {
-            font-size: 3.75rem;
-            font-weight: 900;
-            color: black;
-            margin-bottom: 16px;
-        }
-
-        .stats-text {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: black;
-        }
-
-        .stats-subtext {
-            color: rgba(0,0,0,0.8);
-            font-weight: 600;
-            margin-top: 8px;
-        }
-
+ 
+        .stats-number { font-size: 3.75rem; font-weight: 900; color: black; margin-bottom: 16px; }
+        .stats-text { font-size: 1.25rem; font-weight: 700; color: black; }
+        .stats-subtext { color: rgba(0,0,0,0.8); font-weight: 600; margin-top: 8px; }
+ 
         /* Packages */
-        .packages {
-            padding: 80px 16px;
-        }
-
+        .packages { padding: 80px 16px; }
+ 
         .packages h2 {
             font-size: 2.5rem;
             font-weight: 900;
             text-align: center;
             margin-bottom: 16px;
         }
-
+ 
         .packages-subtitle {
             color: #9ca3af;
             text-align: center;
             margin-bottom: 48px;
             font-size: 1.125rem;
         }
-
+ 
         .packages-grid {
             max-width: 1280px;
             margin: 0 auto;
@@ -540,7 +471,7 @@
             grid-template-columns: 1fr;
             gap: 32px;
         }
-
+ 
         .package-card {
             background: #1a1a1a;
             border: 2px solid #374151;
@@ -549,20 +480,15 @@
             transition: all 0.5s;
             position: relative;
         }
-
+ 
         .package-card:hover {
             border-color: #00ff41;
             transform: translateY(-16px);
         }
-
-        .package-card.vip {
-            border-color: #eab308;
-        }
-
-        .package-card.vip:hover {
-            border-color: #fbbf24;
-        }
-
+ 
+        .package-card.vip { border-color: #eab308; }
+        .package-card.vip:hover { border-color: #fbbf24; }
+ 
         .package-badge {
             position: absolute;
             top: -16px;
@@ -575,7 +501,7 @@
             font-weight: 900;
             font-size: 14px;
         }
-
+ 
         .package-icon {
             width: 96px;
             height: 96px;
@@ -588,13 +514,13 @@
             border: 4px solid #00ff41;
             box-shadow: 0 10px 15px -3px rgba(0, 255, 65, 0.3);
         }
-
+ 
         .package-card.vip .package-icon {
             background: linear-gradient(to bottom right, #eab308, #f59e0b);
             border-color: #eab308;
             box-shadow: 0 10px 15px -3px rgba(234, 179, 8, 0.3);
         }
-
+ 
         .package-title {
             font-size: 1.875rem;
             font-weight: 900;
@@ -602,22 +528,12 @@
             margin-bottom: 8px;
             color: #00ff41;
         }
-
-        .package-card.vip .package-title {
-            color: #eab308;
-        }
-
-        .package-subtitle {
-            text-align: center;
-            color: #9ca3af;
-            margin-bottom: 24px;
-        }
-
-        .package-features {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
+ 
+        .package-card.vip .package-title { color: #eab308; }
+        .package-subtitle { text-align: center; color: #9ca3af; margin-bottom: 24px; }
+ 
+        .package-features { list-style: none; margin-bottom: 32px; }
+ 
         .package-features li {
             display: flex;
             align-items: flex-start;
@@ -625,39 +541,15 @@
             margin-bottom: 12px;
             font-size: 14px;
         }
-
-        .package-features svg {
-            flex-shrink: 0;
-            margin-top: 4px;
-        }
-
-        .package-pricing {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .package-old-price {
-            color: #ef4444;
-            text-decoration: line-through;
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-
-        .package-label {
-            color: #9ca3af;
-            font-size: 14px;
-        }
-
-        .package-price {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #00ff41;
-        }
-
-        .package-card.vip .package-price {
-            color: #eab308;
-        }
-
+ 
+        .package-features svg { flex-shrink: 0; margin-top: 4px; }
+ 
+        .package-pricing { text-align: center; margin-bottom: 24px; }
+        .package-old-price { color: #ef4444; text-decoration: line-through; font-size: 1.25rem; font-weight: 700; }
+        .package-label { color: #9ca3af; font-size: 14px; }
+        .package-price { font-size: 3rem; font-weight: 900; color: #00ff41; }
+        .package-card.vip .package-price { color: #eab308; }
+ 
         .package-button {
             width: 100%;
             background: linear-gradient(to right, #00ff41, #00e639);
@@ -670,27 +562,18 @@
             transition: transform 0.3s;
             font-size: 16px;
         }
-
-        .package-button:hover {
-            transform: scale(1.05);
-        }
-
-        .package-card.vip .package-button {
-            background: linear-gradient(to right, #eab308, #f59e0b);
-        }
-
+ 
+        .package-button:hover { transform: scale(1.05); }
+        .package-card.vip .package-button { background: linear-gradient(to right, #eab308, #f59e0b); }
+ 
         /* Guarantee */
         .guarantee {
             padding: 80px 16px;
             background: linear-gradient(to bottom, transparent, #0f0f0f);
         }
-
-        .guarantee-content {
-            max-width: 896px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
+ 
+        .guarantee-content { max-width: 896px; margin: 0 auto; text-align: center; }
+ 
         .guarantee-badge {
             width: 160px;
             height: 160px;
@@ -703,25 +586,12 @@
             justify-content: center;
             box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.5);
         }
-
-        .guarantee-badge-number {
-            font-size: 4.5rem;
-            font-weight: 900;
-            color: black;
-        }
-
-        .guarantee-badge-text {
-            font-size: 14px;
-            font-weight: 700;
-            color: black;
-        }
-
-        .guarantee h2 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 24px;
-        }
-
+ 
+        .guarantee-badge-number { font-size: 4.5rem; font-weight: 900; color: black; }
+        .guarantee-badge-text { font-size: 14px; font-weight: 700; color: black; }
+ 
+        .guarantee h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 24px; }
+ 
         .guarantee p {
             font-size: 1.25rem;
             color: #d1d5db;
@@ -731,7 +601,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-
+ 
         .guarantee-features {
             display: flex;
             flex-wrap: wrap;
@@ -739,30 +609,21 @@
             gap: 24px;
             font-size: 14px;
         }
-
-        .guarantee-feature {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
+ 
+        .guarantee-feature { display: flex; align-items: center; gap: 8px; }
+ 
         /* FAQ */
-        .faq {
-            padding: 80px 16px;
-        }
-
+        .faq { padding: 80px 16px; }
+ 
         .faq h2 {
             font-size: 2.5rem;
             font-weight: 900;
             text-align: center;
             margin-bottom: 48px;
         }
-
-        .faq-container {
-            max-width: 896px;
-            margin: 0 auto;
-        }
-
+ 
+        .faq-container { max-width: 896px; margin: 0 auto; }
+ 
         .faq-item {
             background: #1a1a1a;
             border: 1px solid #374151;
@@ -771,11 +632,9 @@
             overflow: hidden;
             transition: border-color 0.3s;
         }
-
-        .faq-item:hover {
-            border-color: #00ff41;
-        }
-
+ 
+        .faq-item:hover { border-color: #00ff41; }
+ 
         .faq-question {
             width: 100%;
             padding: 20px 24px;
@@ -791,65 +650,43 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-
-        .faq-question:hover {
-            background: rgba(0, 255, 65, 0.05);
-        }
-
-        .faq-icon {
-            color: #00ff41;
-            transition: transform 0.3s;
-        }
-
-        .faq-icon.open {
-            transform: rotate(180deg);
-        }
-
+ 
+        .faq-question:hover { background: rgba(0, 255, 65, 0.05); }
+        .faq-icon { color: #00ff41; transition: transform 0.3s; }
+        .faq-icon.open { transform: rotate(180deg); }
+ 
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s;
         }
-
+ 
         .faq-answer.open {
             max-height: 500px;
             padding: 0 24px 20px;
         }
-
-        .faq-answer p {
-            color: #9ca3af;
-            line-height: 1.625;
-        }
-
+ 
+        .faq-answer p { color: #9ca3af; line-height: 1.625; }
+ 
         /* Footer */
         footer {
             padding: 48px 16px;
             border-top: 1px solid #374151;
         }
-
-        .footer-content {
-            max-width: 1280px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
+ 
+        .footer-content { max-width: 1280px; margin: 0 auto; text-align: center; }
+ 
         .footer-content > div {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 24px;
         }
-
-        .footer-text {
-            color: #9ca3af;
-            font-size: 14px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-        }
-
+ 
+        .footer-text { color: #9ca3af; font-size: 14px; }
+ 
+        .social-links { display: flex; gap: 16px; }
+ 
         .social-link {
             width: 40px;
             height: 40px;
@@ -863,27 +700,17 @@
             text-decoration: none;
             transition: all 0.3s;
         }
-
+ 
         .social-link:hover {
             background: #00ff41;
             border-color: #00ff41;
             color: black;
         }
-
-        .footer-credits {
-            font-size: 12px;
-            color: #6b7280;
-        }
-
-        .footer-credits a {
-            color: #00ff41;
-            text-decoration: none;
-        }
-
-        .footer-credits a:hover {
-            text-decoration: underline;
-        }
-
+ 
+        .footer-credits { font-size: 12px; color: #6b7280; }
+        .footer-credits a { color: #00ff41; text-decoration: none; }
+        .footer-credits a:hover { text-decoration: underline; }
+ 
         /* Icons SVG */
         .icon {
             width: 24px;
@@ -894,59 +721,18 @@
             stroke-linejoin: round;
             fill: none;
         }
-
-        .icon-filled {
-            fill: currentColor;
-            stroke: none;
-        }
-
+ 
         /* Media Queries */
         @media (min-width: 768px) {
-            h1 {
-                font-size: 4.5rem;
-            }
-
-            .logo {
-                width: 320px;
-            }
-
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .packages-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .testimonials h2 {
-                font-size: 3.75rem;
-            }
-
-            .packages h2,
-            .faq h2 {
-                font-size: 3.75rem;
-            }
-
-            .carousel-mobile {
-                display: none;
-            }
-
-            .carousel-desktop {
-                display: block;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            h1 { font-size: 4.5rem; }
+            .logo { width: 320px; }
+            .features-grid { grid-template-columns: repeat(3, 1fr); }
+            .packages-grid { grid-template-columns: repeat(3, 1fr); }
+            .testimonials h2 { font-size: 3.75rem; }
+            .packages h2, .faq h2 { font-size: 3.75rem; }
         }
-
-        @media (min-width: 1024px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* STICKY CTA BUTTON */
+ 
+        /* STICKY CTA */
         .sticky-cta {
             position: fixed;
             bottom: 20px;
@@ -955,23 +741,17 @@
             z-index: 9996;
             display: none;
         }
-
+ 
         .sticky-cta.show {
             display: block;
             animation: sticky-slide-up 0.5s ease-out;
         }
-
+ 
         @keyframes sticky-slide-up {
-            from {
-                transform: translateX(-50%) translateY(100px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(-50%) translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
         }
-
+ 
         .sticky-cta a {
             display: inline-block;
             background: linear-gradient(to right, #00ff41, #00e639);
@@ -985,12 +765,8 @@
             letter-spacing: 0.04em;
             font-size: 13px;
         }
-
-        .sticky-cta a:hover {
-            transform: scale(1.06);
-        }
-
-        /* Provas sociais abaixo do CTA (igual referência) */
+ 
+        /* Provas sociais */
         .cta-social-proof {
             margin-top: 20px;
             display: inline-flex;
@@ -1001,26 +777,10 @@
             font-size: 14px;
             color: rgba(229, 231, 235, 0.92);
         }
-
-        .cta-social-proof .row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .cta-social-proof .icon {
-            width: 18px;
-            height: 18px;
-        }
-
-        .cta-social-proof strong {
-            font-weight: 900;
-        }
-
-        /* Hidden class */
-        .hidden {
-            display: none;
-        }
+ 
+        .cta-social-proof .row { display: flex; align-items: center; gap: 10px; }
+        .cta-social-proof .icon { width: 18px; height: 18px; }
+        .cta-social-proof strong { font-weight: 900; }
     </style>
 </head>
 <body>
@@ -1028,40 +788,36 @@
     <div class="banner-verde">
         <p>Desconto só <span class="destaque" id="data-atual">HOJE</span> nessa página <span class="destaque" id="data-display"></span></p>
     </div>
-
-    <!-- Sales Counter - Draggable -->
+ 
+    <!-- Sales Counter -->
     <div class="sales-counter" id="sales-counter">
         <svg class="fire-icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
         </svg>
         <span><span class="count" id="sales-count">252</span> vendas nas últimas 24h!</span>
     </div>
-
+ 
     <!-- Notifications -->
     <div class="notifications" id="notifications"></div>
-
+ 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg animate-pulse-slow"></div>
         <div class="hero-content">
-            <!-- Logo -->
             <div class="logo-container animate-float">
                 <img src="https://static.lumi.new/03/03af9622056718bde17a728ece6c9024.webp" alt="New Xiter Logo" class="logo">
             </div>
-
-            <!-- Title -->
+ 
             <h1>
                 DOMINE O <span class="text-neon">FREE FIRE</span> COMO UM<br>
                 <span class="text-neon-red">PROFISSIONAL!</span>
             </h1>
-
-            <!-- Benefits -->
+ 
             <div class="benefits">
                 <p>✅ Curso com + <strong style="color: #00ff41;">10 mil Alunos</strong> Aprovados</p>
                 <p>🎯 Aprenda as <span style="color: #ef4444; font-weight: 700;">Melhores Estratégias</span> e Técnicas dos Pros!</p>
             </div>
-
-            <!-- User Counter -->
+ 
             <div class="user-counter animate-pulse-scale">
                 <svg class="icon" style="color: #00ff41;" width="20" height="20" viewBox="0 0 24 24">
                     <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
@@ -1070,8 +826,8 @@
                 </svg>
                 <span><strong style="color: #00ff41; font-size: 1.25rem;" id="user-count">998</strong> <span style="color: #d1d5db;">alunos online agora!</span></span>
             </div>
-
-            <!-- Wistia Video Player -->
+ 
+            <!-- Wistia Video -->
             <div class="video-placeholder">
                 <script src="https://fast.wistia.com/player.js" async></script>
                 <script src="https://fast.wistia.com/embed/m8pcxycab8.js" async type="module"></script>
@@ -1085,30 +841,27 @@
                 </style>
                 <wistia-player media-id="m8pcxycab8" aspect="1.7777777777777777"></wistia-player>
             </div>
-
-            <!-- CTA Button -->
+ 
             <a href="#pacotes" class="cta-button animate-glow">
                 🎯 QUERO EVOLUIR AGORA!
             </a>
-
-            <!-- Provas sociais abaixo do CTA (igual referência) -->
+ 
             <div class="cta-social-proof">
                 <div class="row">
-                    <span aria-hidden="true">⭐</span>
+                    <span>⭐</span>
                     <span><strong>Avaliação:</strong> 4.9/5 estrelas (baseado em <strong>+5.000 avaliações</strong>)</span>
                 </div>
                 <div class="row">
-                    <span aria-hidden="true">🏆</span>
+                    <span>🏆</span>
                     <span><strong>Eleito</strong> o melhor painel XIT do Brasil por <strong>3 anos consecutivos</strong></span>
                 </div>
             </div>
         </div>
     </section>
-
+ 
     <!-- Features Section -->
     <section class="features">
         <div class="features-grid">
-            <!-- Feature 1 -->
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg class="icon" width="40" height="40" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
@@ -1120,8 +873,7 @@
                 <h3>Técnicas de Mira</h3>
                 <p>Aprenda técnicas profissionais de mira e controle de recuo. Torne-se preciso como os melhores jogadores!</p>
             </div>
-
-            <!-- Feature 2 -->
+ 
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg class="icon" width="40" height="40" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
@@ -1131,8 +883,7 @@
                 <h3>Estratégias Avançadas</h3>
                 <p>Domine posicionamento, rotação e tomada de decisão. Aprenda quando atacar e quando recuar estrategicamente.</p>
             </div>
-
-            <!-- Feature 3 -->
+ 
             <div class="feature-card">
                 <div class="feature-icon">
                     <svg class="icon" width="40" height="40" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
@@ -1146,24 +897,74 @@
             </div>
         </div>
     </section>
-
-    <!-- Customer Testimonials - Carrossel (Desktop e Mobile) -->
+ 
+    <!-- ===== TESTIMONIALS - NOVO CARROSSEL COM 11 IMAGENS ===== -->
     <section class="testimonials">
         <h2>Veja o que <span class="text-neon">Nossos Alunos</span> Dizem</h2>
         <p class="testimonials-subtitle">Feedbacks reais de quem já está evoluindo!</p>
-        
-        <div style="max-width: 720px; margin: 0 auto;">
-            <div class="carousel-container">
-                <div class="testimonial-card">
-                    <img id="carousel-image" src="https://static.lumi.new/95/951425c8a9bb1f795cc67d7cc731529b.webp" alt="Feedback Cliente">
+ 
+        <div class="carousel-wrapper">
+            <div class="carousel-track-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__1_.PNG" alt="Feedback cliente 1" loading="lazy">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__2_.jpg" alt="Feedback cliente 2" loading="lazy">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__3_.jpg" alt="Feedback cliente 3" loading="lazy">
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__5_.jpg" alt="Feedback cliente 4" loading="lazy">
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__6_.jpg" alt="Feedback cliente 5" loading="lazy">
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__7_.jpg" alt="Feedback cliente 6" loading="lazy">
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__8_.jpg" alt="Feedback cliente 7" loading="lazy">
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__9_.jpg" alt="Feedback cliente 8" loading="lazy">
+                    </div>
+                    <!-- Slide 9 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__10_.jpg" alt="Feedback cliente 9" loading="lazy">
+                    </div>
+                    <!-- Slide 10 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__11_.jpg" alt="Feedback cliente 10" loading="lazy">
+                    </div>
+                    <!-- Slide 11 -->
+                    <div class="carousel-slide">
+                        <img src="pvsocial__12_.jpg" alt="Feedback cliente 11" loading="lazy">
+                    </div>
                 </div>
-                
-                <button class="carousel-nav prev" onclick="prevTestimonial()" aria-label="Anterior">‹</button>
-                <button class="carousel-nav next" onclick="nextTestimonial()" aria-label="Próximo">›</button>
-                
-                <div class="carousel-dots" id="carousel-dots"></div>
             </div>
-
+ 
+            <!-- Botões nav -->
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Próximo">&#8250;</button>
+ 
+            <!-- Dots -->
+            <div class="carousel-dots" id="carouselDots"></div>
+ 
+            <!-- Contador -->
+            <p class="carousel-counter"><span id="carouselCurrent">1</span> / <span id="carouselTotal">11</span></p>
+        </div>
+ 
+        <div style="max-width:480px; margin: 0 auto;">
             <div class="stats-card">
                 <p class="stats-number">10.000+</p>
                 <p class="stats-text">Alunos Satisfeitos</p>
@@ -1171,86 +972,39 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Packages Section -->
     <section id="pacotes" class="packages">
         <h2>Escolha Seu <span class="text-neon">Plano</span> Abaixo</h2>
         <p class="packages-subtitle">Todos os planos incluem certificado de conclusão</p>
-
+ 
         <div class="packages-grid">
-            <!-- Basic Package -->
+            <!-- Basic -->
             <div class="package-card">
                 <div class="package-icon" style="background: none; border: none;">
                     <img src="https://static.lumi.new/2d/2d9b767008e280dec175f7326aeb82bd.webp" alt="Android" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <h3 class="package-title">BÁSICO</h3>
                 <p class="package-subtitle">Ideal para iniciantes</p>
-
                 <ul class="package-features">
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
-                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
-                        </svg>
-                        <span>30 Aulas em Vídeo HD</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
-                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
-                        </svg>
-                        <span>Fundamentos e Mecânicas</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
-                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
-                        </svg>
-                        <span>Técnicas de Mira Básica</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
-                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
-                        </svg>
-                        <span>Mapas e Posicionamento</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Acesso por 6 meses</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Suporte via Chat</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Certificado Digital</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Garantia de 7 Dias</span>
-                    </li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>30 Aulas em Vídeo HD</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Fundamentos e Mecânicas</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Técnicas de Mira Básica</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Mapas e Posicionamento</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso por 6 meses</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Suporte via Chat</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Certificado Digital</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Garantia de 7 Dias</span></li>
                 </ul>
-
                 <div class="package-pricing">
                     <p class="package-old-price">De R$ 147,90</p>
                     <p class="package-label">Por apenas</p>
                     <p class="package-price">R$ 29,90</p>
                 </div>
-
                 <button class="package-button animate-neon-green">🛒 COMPRAR AGORA!</button>
             </div>
-
-            <!-- Advanced Package -->
+ 
+            <!-- Advanced -->
             <div class="package-card">
                 <div class="package-icon">
                     <svg class="icon" width="48" height="48" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
@@ -1259,72 +1013,25 @@
                 </div>
                 <h3 class="package-title">AVANÇADO</h3>
                 <p class="package-subtitle">Para jogadores intermediários</p>
-
                 <ul class="package-features">
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
-                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
-                        </svg>
-                        <span>60 Aulas em Vídeo HD</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
-                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
-                        </svg>
-                        <span>Tudo do Plano Básico +</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
-                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
-                        </svg>
-                        <span>Técnicas Avançadas de Combate</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
-                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
-                        </svg>
-                        <span>Estratégias Competitivas</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Acesso por 1 ano</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Análise de Gameplay (2x)</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Grupo VIP no Discord</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Garantia de 7 Dias</span>
-                    </li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>60 Aulas em Vídeo HD</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Tudo do Plano Básico +</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Técnicas Avançadas de Combate</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Estratégias Competitivas</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso por 1 ano</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Análise de Gameplay (2x)</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Grupo VIP no Discord</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Garantia de 7 Dias</span></li>
                 </ul>
-
                 <div class="package-pricing">
                     <p class="package-old-price">De R$ 197,90</p>
                     <p class="package-label">Por apenas</p>
                     <p class="package-price">R$ 49,90</p>
                 </div>
-
                 <button class="package-button animate-neon-green">🛒 COMPRAR AGORA!</button>
             </div>
-
-            <!-- VIP Package -->
+ 
+            <!-- VIP -->
             <div class="package-card vip">
                 <div class="package-badge">Mais Popular!</div>
                 <div class="package-icon">
@@ -1334,73 +1041,26 @@
                 </div>
                 <h3 class="package-title">MENTORIA VIP</h3>
                 <p class="package-subtitle">Acesso VITALÍCIO + Coaching</p>
-
                 <ul class="package-features">
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        <span>Tudo dos Planos Anteriores</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        <span>Acesso Vitalício</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        <span>Mentoria 1-on-1 (Mensal)</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        <span>Análise Ilimitada de Gameplay</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Suporte Prioritário 24h</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Participação em Treinos Pro</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Atualizações Vitalícias</span>
-                    </li>
-                    <li>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>Garantia de 30 Dias!</span>
-                    </li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Tudo dos Planos Anteriores</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Acesso Vitalício</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Mentoria 1-on-1 (Mensal)</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Análise Ilimitada de Gameplay</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Suporte Prioritário 24h</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Participação em Treinos Pro</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Atualizações Vitalícias</span></li>
+                    <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Garantia de 30 Dias!</span></li>
                 </ul>
-
                 <div class="package-pricing">
                     <p class="package-old-price">De R$ 499,90</p>
                     <p class="package-label">Por apenas</p>
                     <p class="package-price">R$ 99,90</p>
                 </div>
-
                 <button class="package-button animate-neon-yellow">👑 QUERO SER VIP!</button>
             </div>
         </div>
     </section>
-
+ 
     <!-- Guarantee Section -->
     <section class="guarantee">
         <div class="guarantee-content">
@@ -1408,84 +1068,60 @@
                 <span class="guarantee-badge-number">7</span>
                 <span class="guarantee-badge-text">DIAS</span>
             </div>
-
             <h2>Garantia <span class="text-neon">Total</span> de Satisfação</h2>
-
             <p>Experimente o curso por 7 dias completos. Se por qualquer motivo você não ficar 100% satisfeito com os resultados, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia.</p>
-
             <div class="guarantee-features">
                 <div class="guarantee-feature">
-                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                        <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     <span>Reembolso em até 24h</span>
                 </div>
                 <div class="guarantee-feature">
-                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                        <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     <span>Sem perguntas</span>
                 </div>
                 <div class="guarantee-feature">
-                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;">
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                        <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     <span>Compra 100% segura</span>
                 </div>
             </div>
         </div>
     </section>
-
+ 
     <!-- FAQ Section -->
     <section class="faq" id="faq">
         <h2>Perguntas <span class="text-neon">Frequentes</span></h2>
-
         <div class="faq-container">
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(0)">
                     <span>O curso funciona para iniciantes?</span>
-                    <svg class="icon faq-icon" id="faq-icon-0" width="24" height="24" viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9"/>
-                    </svg>
+                    <svg class="icon faq-icon" id="faq-icon-0" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
                 <div class="faq-answer" id="faq-answer-0">
                     <p>Sim! Temos módulos específicos desde o básico até o avançado. Você aprenderá no seu próprio ritmo.</p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(1)">
                     <span>Quanto tempo dura o acesso?</span>
-                    <svg class="icon faq-icon" id="faq-icon-1" width="24" height="24" viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9"/>
-                    </svg>
+                    <svg class="icon faq-icon" id="faq-icon-1" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
                 <div class="faq-answer" id="faq-answer-1">
                     <p>Depende do plano escolhido: Básico (6 meses), Avançado (1 ano) e VIP (acesso vitalício).</p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(2)">
                     <span>Como recebo o acesso após a compra?</span>
-                    <svg class="icon faq-icon" id="faq-icon-2" width="24" height="24" viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9"/>
-                    </svg>
+                    <svg class="icon faq-icon" id="faq-icon-2" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
                 <div class="faq-answer" id="faq-answer-2">
                     <p>Imediatamente após a confirmação do pagamento, você receberá o acesso por e-mail com todas as instruções de login na plataforma.</p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(3)">
                     <span>Qual a diferença entre os planos?</span>
-                    <svg class="icon faq-icon" id="faq-icon-3" width="24" height="24" viewBox="0 0 24 24">
-                        <polyline points="6 9 12 15 18 9"/>
-                    </svg>
+                    <svg class="icon faq-icon" id="faq-icon-3" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
                 <div class="faq-answer" id="faq-answer-3">
                     <p>O Básico foca nos fundamentos, o Avançado inclui técnicas competitivas e análise de gameplay, e o VIP oferece mentoria personalizada 1-on-1 com coaches profissionais.</p>
@@ -1493,18 +1129,17 @@
             </div>
         </div>
     </section>
-
-    <!-- Sticky CTA Button (aparece apenas ao chegar no FAQ) -->
+ 
+    <!-- Sticky CTA -->
     <div class="sticky-cta" id="sticky-cta">
         <a href="#pacotes">GARANTIR MINHA VAGA</a>
     </div>
-
+ 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div>
                 <p class="footer-text">© 2024 Free Fire PRO. Todos os direitos reservados.</p>
-                
                 <div class="social-links">
                     <a href="https://www.instagram.com/new.xiter.ff/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                         <svg class="icon" width="20" height="20" viewBox="0 0 24 24">
@@ -1514,31 +1149,28 @@
                         </svg>
                     </a>
                 </div>
-                
                 <p class="footer-credits">
                     Desenvolvido por <a href="#">Free Fire PRO Team</a>
                 </p>
             </div>
         </div>
     </footer>
-
+ 
     <script>
         // Current Date
         document.getElementById('data-display').textContent = new Date().toLocaleDateString('pt-BR');
-
+ 
         // Sales Counter
         let salesCount = 252;
         setInterval(() => {
             salesCount += Math.floor(Math.random() * 3) + 1;
             document.getElementById('sales-count').textContent = salesCount;
         }, 15000);
-
+ 
         // Draggable Sales Counter
         const salesCounter = document.getElementById('sales-counter');
-        let isDragging = false;
-        let offsetX = 0;
-        let offsetY = 0;
-
+        let isDragging = false, offsetX = 0, offsetY = 0;
+ 
         salesCounter.addEventListener('mousedown', (e) => {
             isDragging = true;
             offsetX = e.clientX - salesCounter.offsetLeft;
@@ -1546,20 +1178,19 @@
             salesCounter.classList.add('dragging');
             salesCounter.style.right = 'auto';
         });
-
+ 
         document.addEventListener('mousemove', (e) => {
             if (isDragging) {
                 salesCounter.style.left = (e.clientX - offsetX) + 'px';
                 salesCounter.style.top = (e.clientY - offsetY) + 'px';
             }
         });
-
+ 
         document.addEventListener('mouseup', () => {
             isDragging = false;
             salesCounter.classList.remove('dragging');
         });
-
-        // Touch support for mobile
+ 
         salesCounter.addEventListener('touchstart', (e) => {
             isDragging = true;
             const touch = e.touches[0];
@@ -1568,8 +1199,8 @@
             salesCounter.classList.add('dragging');
             salesCounter.style.right = 'auto';
             e.preventDefault();
-        });
-
+        }, { passive: false });
+ 
         document.addEventListener('touchmove', (e) => {
             if (isDragging) {
                 const touch = e.touches[0];
@@ -1577,30 +1208,30 @@
                 salesCounter.style.top = (touch.clientY - offsetY) + 'px';
                 e.preventDefault();
             }
-        });
-
+        }, { passive: false });
+ 
         document.addEventListener('touchend', () => {
             isDragging = false;
             salesCounter.classList.remove('dragging');
         });
-
+ 
         // User Counter
         let userCount = 998;
         setInterval(() => {
             userCount += Math.floor(Math.random() * 8) + 3;
             document.getElementById('user-count').textContent = userCount.toLocaleString('pt-BR');
         }, 20000);
-
+ 
         // Purchase Notifications
         const names = ["João Silva", "Maria Santos", "Pedro Costa", "Ana", "Carlos Souza", "Juliana", "Rafael", "Camila"];
         const products = ["🎯 Curso Free Fire Básico", "🎯 Curso Free Fire Avançado", "👑 Mentoria VIP"];
         const cities = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Porto Alegre", "Curitiba", "Recife", "Fortaleza"];
-
+ 
         function showNotification() {
             const name = names[Math.floor(Math.random() * names.length)];
             const product = products[Math.floor(Math.random() * products.length)];
             const city = cities[Math.floor(Math.random() * cities.length)];
-
+ 
             const notif = document.createElement('div');
             notif.className = 'notification animate-slide-in';
             notif.innerHTML = `
@@ -1615,79 +1246,89 @@
                     <p style="color: #9ca3af; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${name} • ${city}</p>
                 </div>
             `;
-
             document.getElementById('notifications').appendChild(notif);
-
-            setTimeout(() => {
-                notif.remove();
-            }, 5000);
+            setTimeout(() => notif.remove(), 5000);
         }
-
+ 
         setTimeout(() => showNotification(), 3000);
         setInterval(() => showNotification(), Math.random() * 7000 + 8000);
-
-        // Carousel
-        const testimonials = [
-            "https://static.lumi.new/95/951425c8a9bb1f795cc67d7cc731529b.webp",
-            "https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp",
-            "https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp",
-            "https://static.lumi.new/18/1854e98d1e0bbac7e82991bce2fe2f1d.webp",
-            "https://static.lumi.new/83/8353ac944cba71a88419ac25276ae161.webp"
-        ];
-        let currentTestimonial = 0;
-
-        function updateCarousel() {
-            document.getElementById('carousel-image').src = testimonials[currentTestimonial];
-            document.querySelectorAll('.carousel-dot').forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === currentTestimonial);
-            });
-        }
-
-        function nextTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            updateCarousel();
-        }
-
-        function prevTestimonial() {
-            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-            updateCarousel();
-        }
-
-        // Create carousel dots
-        const dotsContainer = document.getElementById('carousel-dots');
-        testimonials.forEach((_, idx) => {
+ 
+        // ===== NOVO CARROSSEL =====
+        const TOTAL_SLIDES = 11;
+        let currentSlide = 0;
+        let autoplayTimer = null;
+ 
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+        const currentEl = document.getElementById('carouselCurrent');
+ 
+        // Criar dots
+        for (let i = 0; i < TOTAL_SLIDES; i++) {
             const dot = document.createElement('button');
-            dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
-            dot.onclick = () => {
-                currentTestimonial = idx;
-                updateCarousel();
-            };
-            dot.setAttribute('aria-label', `Ir para feedback ${idx + 1}`);
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `Feedback ${i + 1}`);
+            dot.addEventListener('click', () => goToSlide(i));
             dotsContainer.appendChild(dot);
-        });
-
+        }
+ 
+        function goToSlide(index) {
+            currentSlide = (index + TOTAL_SLIDES) % TOTAL_SLIDES;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            currentEl.textContent = currentSlide + 1;
+            document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+                d.classList.toggle('active', i === currentSlide);
+            });
+            resetAutoplay();
+        }
+ 
+        function moveCarousel(dir) {
+            goToSlide(currentSlide + dir);
+        }
+ 
+        // Autoplay
+        function startAutoplay() {
+            autoplayTimer = setInterval(() => goToSlide(currentSlide + 1), 4000);
+        }
+ 
+        function resetAutoplay() {
+            clearInterval(autoplayTimer);
+            startAutoplay();
+        }
+ 
+        startAutoplay();
+ 
+        // Swipe suporte mobile
+        let touchStartX = 0;
+        const trackContainer = document.querySelector('.carousel-track-container');
+ 
+        trackContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+ 
+        trackContainer.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) moveCarousel(diff > 0 ? 1 : -1);
+        }, { passive: true });
+ 
         // FAQ Toggle
         function toggleFaq(index) {
             const answer = document.getElementById(`faq-answer-${index}`);
             const icon = document.getElementById(`faq-icon-${index}`);
-            
             answer.classList.toggle('open');
             icon.classList.toggle('open');
         }
-
-        // Sticky CTA: mostrar somente quando o cliente chegar na seção FAQ
+ 
+        // Sticky CTA
         const stickyCta = document.getElementById('sticky-cta');
         const faqEl = document.getElementById('faq');
-
+ 
         if (stickyCta && faqEl && 'IntersectionObserver' in window) {
             const obs = new IntersectionObserver(
                 (entries) => {
-                    const entry = entries && entries[0];
-                    stickyCta.classList.toggle('show', !!entry && entry.isIntersecting);
+                    stickyCta.classList.toggle('show', entries[0].isIntersecting);
                 },
                 { threshold: 0.35 }
             );
-
             obs.observe(faqEl);
         }
     </script>
