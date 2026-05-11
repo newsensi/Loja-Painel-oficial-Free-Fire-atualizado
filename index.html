@@ -1,6 +1,3 @@
-fire pro · HTML
-Copiar
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -693,28 +690,84 @@ Copiar
  
         /* Footer */
         footer {
-            padding: 48px 16px;
-            border-top: 1px solid #374151;
+            padding: 60px 16px 40px;
+            border-top: 1px solid #1e1e1e;
+            background: #000;
         }
  
-        .footer-content { max-width: 1280px; margin: 0 auto; text-align: center; }
- 
-        .footer-content > div {
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 24px;
+            gap: 28px;
+            text-align: center;
         }
  
-        .footer-text { color: #9ca3af; font-size: 14px; }
+        .footer-logo-wrap { display: flex; justify-content: center; }
  
-        .social-links { display: flex; gap: 16px; }
+        .footer-logo {
+            width: 180px;
+            max-width: 80%;
+            height: auto;
+            filter: drop-shadow(0 0 12px rgba(0,255,65,0.2));
+        }
  
-        .social-link {
-            width: 40px;
-            height: 40px;
+        /* Botão Saiba Mais */
+        .footer-saiba-btn {
+            background: #00ff41;
+            color: black;
+            font-weight: 900;
+            font-size: 15px;
+            padding: 14px 36px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0,255,65,0.35);
+        }
+ 
+        .footer-saiba-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 28px rgba(0,255,65,0.5);
+        }
+ 
+        /* Texto expansível */
+        .footer-about {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.4s ease;
+            opacity: 0;
+            max-width: 620px;
+        }
+ 
+        .footer-about.open {
+            max-height: 600px;
+            opacity: 1;
+        }
+ 
+        .footer-about p {
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.75;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+ 
+        .footer-about p:last-child { margin-bottom: 0; }
+ 
+        .footer-copyright {
+            color: #6b7280;
+            font-size: 13px;
+        }
+ 
+        .footer-insta {
+            width: 44px;
+            height: 44px;
             background: #1a1a1a;
-            border: 1px solid #374151;
+            border: 1px solid #2a2a2a;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -724,15 +777,11 @@ Copiar
             transition: all 0.3s;
         }
  
-        .social-link:hover {
+        .footer-insta:hover {
             background: #00ff41;
             border-color: #00ff41;
             color: black;
         }
- 
-        .footer-credits { font-size: 12px; color: #6b7280; }
-        .footer-credits a { color: #00ff41; text-decoration: none; }
-        .footer-credits a:hover { text-decoration: underline; }
  
         /* Icons SVG */
         .icon {
@@ -1177,21 +1226,30 @@ Copiar
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div>
-                <p class="footer-text">© 2024 Free Fire PRO. Todos os direitos reservados.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/new.xiter.ff/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                        <svg class="icon" width="20" height="20" viewBox="0 0 24 24">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                        </svg>
-                    </a>
-                </div>
-                <p class="footer-credits">
-                    Desenvolvido por <a href="#">Free Fire PRO Team</a>
-                </p>
+            <div class="footer-logo-wrap">
+                <img src="logo.png" alt="New Xiter Logo" class="footer-logo">
             </div>
+ 
+            <!-- Botão Saiba Mais -->
+            <button class="footer-saiba-btn" id="saibaMaisBtn" onclick="toggleSaibaMais()">
+                Saiba Mais Sobre Nós
+            </button>
+ 
+            <!-- Texto expansível -->
+            <div class="footer-about" id="footerAbout">
+                <p>Sou um criador especializado em hacking e desenvolvimento de aplicativos voltados para jogos. Tenho experiência em criar ferramentas e soluções que otimizam a experiência de jogo, além de desenvolver aplicativos personalizados para melhorar a jogabilidade e a interação dos usuários. Meu foco é inovar e oferecer recursos que atendam às necessidades dos jogadores de Free Fire.</p>
+                <p>Nosso painel é para quem deseja ativar o recurso de xitar 100% full capa no Free Fire em qualquer dispositivo, com 100% de anti-ban e atualizado! Este novo painel utiliza códigos oficiais da Garena Free Fire, vazados dos arquivos da própria Garena. Utilizamos isso para criar um cheat 100% anti-ban e seguro para qualquer dispositivo.</p>
+            </div>
+ 
+            <p class="footer-copyright">© 2026 New sensi - xiter. Todos os direitos reservados.</p>
+ 
+            <a href="https://www.instagram.com/new.xiter.ff/" target="_blank" rel="noopener noreferrer" class="footer-insta" aria-label="Instagram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+            </a>
         </div>
     </footer>
  
@@ -1349,6 +1407,14 @@ Copiar
             if (Math.abs(diff) > 40) moveCarousel(diff > 0 ? 1 : -1);
         }, { passive: true });
  
+        // Saiba Mais toggle
+        function toggleSaibaMais() {
+            const about = document.getElementById('footerAbout');
+            const btn = document.getElementById('saibaMaisBtn');
+            const isOpen = about.classList.toggle('open');
+            btn.textContent = isOpen ? 'Fechar ▲' : 'Saiba Mais Sobre Nós';
+        }
+ 
         // FAQ Toggle
         function toggleFaq(index) {
             const answer = document.getElementById(`faq-answer-${index}`);
@@ -1373,4 +1439,3 @@ Copiar
     </script>
 </body>
 </html>
- 
