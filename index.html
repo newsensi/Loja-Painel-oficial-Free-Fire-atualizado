@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Fire PRO - Curso Completo | Do Iniciante ao Mestre</title>
     <meta name="description" content="Aprenda as melhores estratégias e técnicas profissionais de Free Fire. Curso completo com coaching personalizado. +10.000 alunos já dominaram o jogo!">
+ 
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3525977697696631');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=3525977697696631&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel -->
     <style>
         * {
             margin: 0;
@@ -17,6 +33,33 @@
             background: #0a0a0a;
             color: white;
             overflow-x: hidden;
+        }
+ 
+        /* Canvas 3D background */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+ 
+        /* Garantir que todo conteúdo fique acima do canvas */
+        .banner-verde,
+        .sales-counter,
+        .notifications,
+        .hero,
+        .features,
+        .testimonials,
+        .packages,
+        .guarantee,
+        .faq,
+        footer,
+        .sticky-cta {
+            position: relative;
+            z-index: 1;
         }
  
         /* Animations */
@@ -857,6 +900,9 @@
     </style>
 </head>
 <body>
+    <!-- 3D Tech Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+ 
     <!-- Banner Verde -->
     <div class="banner-verde">
         <p>Desconto só <span class="destaque" id="data-atual">HOJE</span> nessa página <span class="destaque" id="data-display"></span></p>
@@ -1436,6 +1482,144 @@
             );
             obs.observe(faqEl);
         }
+    <script>
+    // ===== 3D TECH BACKGROUND =====
+    (function() {
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+ 
+        let W, H, nodes, mouse = { x: -9999, y: -9999 };
+        const NEON = '#00ff41';
+        const NODE_COUNT = 90;
+        const MAX_DIST = 160;
+        const DEPTH = 400; // profundidade Z
+ 
+        function resize() {
+            W = canvas.width = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+ 
+        function randRange(a, b) { return a + Math.random() * (b - a); }
+ 
+        function createNodes() {
+            nodes = Array.from({ length: NODE_COUNT }, () => ({
+                x: randRange(0, W),
+                y: randRange(0, H),
+                z: randRange(50, DEPTH),
+                vx: randRange(-0.25, 0.25),
+                vy: randRange(-0.15, 0.15),
+                vz: randRange(-0.3, 0.3),
+                r: randRange(1.2, 2.8)
+            }));
+        }
+ 
+        // Projeção perspectiva simples
+        function project(node) {
+            const fov = 300;
+            const scale = fov / (fov + node.z);
+            return {
+                sx: node.x * scale + W * (1 - scale) / 2,
+                sy: node.y * scale + H * (1 - scale) / 2,
+                scale: scale
+            };
+        }
+ 
+        function draw() {
+            ctx.clearRect(0, 0, W, H);
+ 
+            // Fundo gradiente sutil
+            const grad = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, Math.max(W,H)*0.8);
+            grad.addColorStop(0, 'rgba(0,20,5,0.55)');
+            grad.addColorStop(1, 'rgba(0,0,0,0)');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, W, H);
+ 
+            // Atualizar posições
+            nodes.forEach(n => {
+                n.x += n.vx;
+                n.y += n.vy;
+                n.z += n.vz;
+ 
+                if (n.x < 0 || n.x > W) n.vx *= -1;
+                if (n.y < 0 || n.y > H) n.vy *= -1;
+                if (n.z < 30 || n.z > DEPTH) n.vz *= -1;
+            });
+ 
+            // Ordenar por Z (back to front)
+            const sorted = [...nodes].sort((a, b) => b.z - a.z);
+ 
+            // Linhas entre nós próximos
+            for (let i = 0; i < sorted.length; i++) {
+                const a = sorted[i];
+                const pa = project(a);
+                for (let j = i + 1; j < sorted.length; j++) {
+                    const b = sorted[j];
+                    const pb = project(b);
+                    const dx = pa.sx - pb.sx;
+                    const dy = pa.sy - pb.sy;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < MAX_DIST) {
+                        const alpha = (1 - dist / MAX_DIST) * 0.18 * pa.scale * pb.scale * 3;
+                        ctx.beginPath();
+                        ctx.moveTo(pa.sx, pa.sy);
+                        ctx.lineTo(pb.sx, pb.sy);
+                        ctx.strokeStyle = `rgba(0,255,65,${alpha})`;
+                        ctx.lineWidth = 0.7 * (pa.scale + pb.scale) / 2;
+                        ctx.stroke();
+                    }
+                }
+            }
+ 
+            // Nós
+            sorted.forEach(n => {
+                const { sx, sy, scale } = project(n);
+                const r = n.r * scale * 2.5;
+                const alpha = 0.35 + scale * 0.65;
+ 
+                // Glow
+                const glow = ctx.createRadialGradient(sx, sy, 0, sx, sy, r * 4);
+                glow.addColorStop(0, `rgba(0,255,65,${alpha * 0.5})`);
+                glow.addColorStop(1, 'rgba(0,255,65,0)');
+                ctx.beginPath();
+                ctx.arc(sx, sy, r * 4, 0, Math.PI * 2);
+                ctx.fillStyle = glow;
+                ctx.fill();
+ 
+                // Ponto
+                ctx.beginPath();
+                ctx.arc(sx, sy, r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0,255,65,${alpha})`;
+                ctx.fill();
+            });
+ 
+            // Linhas de mouse com nós próximos
+            nodes.forEach(n => {
+                const { sx, sy } = project(n);
+                const dx = sx - mouse.x;
+                const dy = sy - mouse.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < 180) {
+                    const alpha = (1 - dist / 180) * 0.4;
+                    ctx.beginPath();
+                    ctx.moveTo(mouse.x, mouse.y);
+                    ctx.lineTo(sx, sy);
+                    ctx.strokeStyle = `rgba(0,255,65,${alpha})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            });
+ 
+            requestAnimationFrame(draw);
+        }
+ 
+        window.addEventListener('resize', () => { resize(); createNodes(); });
+        window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+ 
+        resize();
+        createNodes();
+        draw();
+    })();
     </script>
 </body>
 </html>
