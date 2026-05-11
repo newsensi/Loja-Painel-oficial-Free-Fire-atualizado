@@ -398,13 +398,18 @@
             object-fit: cover;
         }
 
-        /* Fix mobile testimonial images to same size */
+        /* Fix testimonial images to consistent size */
+        .testimonial-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            background: #1a1a1a;
+            display: block;
+        }
+
         @media (max-width: 767px) {
-            .carousel-mobile .testimonial-card img {
-                width: 100%;
+            .testimonial-card img {
                 height: 400px;
-                object-fit: contain;
-                background: #1a1a1a;
             }
         }
 
@@ -1142,44 +1147,15 @@
         </div>
     </section>
 
-    <!-- Customer Testimonials - Desktop -->
-    <section class="testimonials carousel-desktop">
+    <!-- Customer Testimonials - Carrossel (Desktop e Mobile) -->
+    <section class="testimonials">
         <h2>Veja o que <span class="text-neon">Nossos Alunos</span> Dizem</h2>
         <p class="testimonials-subtitle">Feedbacks reais de quem já está evoluindo!</p>
         
-        <div class="testimonials-grid" style="max-width: 1280px; margin: 0 auto;">
-            <div class="testimonial-card">
-                <img src="https://static.lumi.new/c7/c7b914d10688c2fffc5cb4d141e67636.webp" alt="Feedback Cliente 1">
-            </div>
-            <div class="testimonial-card">
-                <img src="https://static.lumi.new/18/18ccbb3b265253da2c711dc58abd771e.webp" alt="Feedback Cliente 2">
-            </div>
-            <div class="testimonial-card">
-                <img src="https://static.lumi.new/18/18e3fc8e4eb0873a2d8b5f2f6bf9e17e.webp" alt="Feedback Cliente 3">
-            </div>
-            <div class="testimonial-card">
-                <img src="https://static.lumi.new/fe/fefcf3863fb7b5c7110f449e572a6fcc.webp" alt="Feedback Cliente 4">
-            </div>
-            <div class="testimonial-card">
-                <img src="https://static.lumi.new/e0/e0d72d5583e8ea847c16e94db16083d0.webp" alt="Feedback Cliente 5">
-            </div>
-            <div class="stats-card">
-                <p class="stats-number">10.000+</p>
-                <p class="stats-text">Alunos Satisfeitos</p>
-                <p class="stats-subtext">E você será o próximo!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Customer Testimonials - Mobile Carousel -->
-    <section class="testimonials carousel-mobile">
-        <h2>Veja o que <span class="text-neon">Nossos Alunos</span> Dizem</h2>
-        <p class="testimonials-subtitle">Feedbacks reais de quem já está evoluindo!</p>
-        
-        <div style="max-width: 1280px; margin: 0 auto;">
+        <div style="max-width: 720px; margin: 0 auto;">
             <div class="carousel-container">
                 <div class="testimonial-card">
-                    <img id="carousel-image" src="https://static.lumi.new/c7/c7b914d10688c2fffc5cb4d141e67636.webp" alt="Feedback Cliente">
+                    <img id="carousel-image" src="https://static.lumi.new/95/951425c8a9bb1f795cc67d7cc731529b.webp" alt="Feedback Cliente">
                 </div>
                 
                 <button class="carousel-nav prev" onclick="prevTestimonial()" aria-label="Anterior">‹</button>
@@ -1530,7 +1506,7 @@
                 <p class="footer-text">© 2024 Free Fire PRO. Todos os direitos reservados.</p>
                 
                 <div class="social-links">
-                    <a href="#" class="social-link" aria-label="Instagram">
+                    <a href="https://www.instagram.com/new.xiter.ff/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                         <svg class="icon" width="20" height="20" viewBox="0 0 24 24">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
@@ -1652,11 +1628,11 @@
 
         // Carousel
         const testimonials = [
-            "https://static.lumi.new/c7/c7b914d10688c2fffc5cb4d141e67636.webp",
-            "https://static.lumi.new/18/18ccbb3b265253da2c711dc58abd771e.webp",
-            "https://static.lumi.new/18/18e3fc8e4eb0873a2d8b5f2f6bf9e17e.webp",
-            "https://static.lumi.new/fe/fefcf3863fb7b5c7110f449e572a6fcc.webp",
-            "https://static.lumi.new/e0/e0d72d5583e8ea847c16e94db16083d0.webp"
+            "https://static.lumi.new/95/951425c8a9bb1f795cc67d7cc731529b.webp",
+            "https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp",
+            "https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp",
+            "https://static.lumi.new/18/1854e98d1e0bbac7e82991bce2fe2f1d.webp",
+            "https://static.lumi.new/83/8353ac944cba71a88419ac25276ae161.webp"
         ];
         let currentTestimonial = 0;
 
