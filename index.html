@@ -985,7 +985,6 @@
             <!-- Card 1: Aimbot Legit -->
             <div class="feature-card">
                 <div class="feature-icon">
-                    <!-- Crosshair / aim icon -->
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"/>
                         <circle cx="12" cy="12" r="3"/>
@@ -1002,7 +1001,6 @@
             <!-- Card 2: Bypass Anti-Ban (destaque) -->
             <div class="feature-card feature-card--highlight">
                 <div class="feature-icon">
-                    <!-- Ghost icon -->
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="black" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 2C7.58 2 4 5.58 4 10v10l2.5-2 2.5 2 2.5-2 2.5 2 2.5-2 2.5 2V10c0-4.42-3.58-8-8-8z"/>
                         <circle cx="9" cy="10" r="1.2" fill="white" stroke="none"/>
@@ -1016,7 +1014,6 @@
             <!-- Card 3: Sistema Stealth -->
             <div class="feature-card">
                 <div class="feature-icon">
-                    <!-- Spy / stealth icon -->
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="8" r="4"/>
                         <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
@@ -1040,61 +1037,47 @@
         <div class="carousel-wrapper">
             <div class="carousel-track-container">
                 <div class="carousel-track" id="carouselTrack">
-                    <!-- Slide 1 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (8).jpg" alt="Feedback cliente 1" loading="lazy">
                     </div>
-                    <!-- Slide 2 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (1).PNG" alt="Feedback cliente 2" loading="lazy">
                     </div>
-                    <!-- Slide 3 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (2).jpg" alt="Feedback cliente 3" loading="lazy">
                     </div>
-                    <!-- Slide 4 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (10).jpg" alt="Feedback cliente 4" loading="lazy">
                     </div>
-                    <!-- Slide 5 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (11).jpg" alt="Feedback cliente 5" loading="lazy">
                     </div>
-                    <!-- Slide 6 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (12).jpg" alt="Feedback cliente 6" loading="lazy">
                     </div>
-                    <!-- Slide 7 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (3).jpg" alt="Feedback cliente 7" loading="lazy">
                     </div>
-                    <!-- Slide 8 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (5).jpg" alt="Feedback cliente 8" loading="lazy">
                     </div>
-                    <!-- Slide 9 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (6).jpg" alt="Feedback cliente 9" loading="lazy">
                     </div>
-                    <!-- Slide 10 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (7).jpg" alt="Feedback cliente 10" loading="lazy">
                     </div>
-                    <!-- Slide 11 -->
                     <div class="carousel-slide">
                         <img src="img site/pvsocial (9).jpg" alt="Feedback cliente 11" loading="lazy">
                     </div>
                 </div>
             </div>
  
-            <!-- Botões nav -->
             <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#8249;</button>
             <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Próximo">&#8250;</button>
  
-            <!-- Dots -->
             <div class="carousel-dots" id="carouselDots"></div>
  
-            <!-- Contador -->
             <p class="carousel-counter"><span id="carouselCurrent">1</span> / <span id="carouselTotal">11</span></p>
         </div>
  
@@ -1299,18 +1282,16 @@
     </div>
  
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
         <div class="footer-content">
             <div class="footer-logo-wrap">
                 <img src="img site/logo.png" alt="New Xiter Logo" class="footer-logo">
             </div>
  
-            <!-- Botão Saiba Mais -->
             <button class="footer-saiba-btn" id="saibaMaisBtn" onclick="toggleSaibaMais()">
                 Saiba Mais Sobre Nós
             </button>
  
-            <!-- Texto expansível -->
             <div class="footer-about" id="footerAbout">
                 <p>Sou um criador especializado em hacking e desenvolvimento de aplicativos voltados para jogos. Tenho experiência em criar ferramentas e soluções que otimizam a experiência de jogo, além de desenvolver aplicativos personalizados para melhorar a jogabilidade e a interação dos usuários. Meu foco é inovar e oferecer recursos que atendam às necessidades dos jogadores de Free Fire.</p>
                 <p>Nosso painel é para quem deseja ativar o recurso de xitar 100% full capa no Free Fire em qualquer dispositivo, com 100% de anti-ban e atualizado! Este novo painel utiliza códigos oficiais da Garena Free Fire, vazados dos arquivos da própria Garena. Utilizamos isso para criar um cheat 100% anti-ban e seguro para qualquer dispositivo.</p>
@@ -1434,7 +1415,6 @@
         const dotsContainer = document.getElementById('carouselDots');
         const currentEl = document.getElementById('carouselCurrent');
  
-        // Criar dots
         for (let i = 0; i < TOTAL_SLIDES; i++) {
             const dot = document.createElement('button');
             dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
@@ -1457,7 +1437,6 @@
             goToSlide(currentSlide + dir);
         }
  
-        // Autoplay
         function startAutoplay() {
             autoplayTimer = setInterval(() => goToSlide(currentSlide + 1), 4000);
         }
@@ -1469,7 +1448,6 @@
  
         startAutoplay();
  
-        // Swipe suporte mobile
         let touchStartX = 0;
         const trackContainer = document.querySelector('.carousel-track-container');
  
@@ -1498,18 +1476,44 @@
             icon.classList.toggle('open');
         }
  
-        // Sticky CTA
+        // Sticky CTA — some no FAQ E no footer
         const stickyCta = document.getElementById('sticky-cta');
         const faqEl = document.getElementById('faq');
- 
-        if (stickyCta && faqEl && 'IntersectionObserver' in window) {
-            const obs = new IntersectionObserver(
-                (entries) => {
-                    stickyCta.classList.toggle('show', entries[0].isIntersecting);
-                },
-                { threshold: 0.35 }
-            );
-            obs.observe(faqEl);
+        const footerEl = document.getElementById('footer');
+
+        if (stickyCta && 'IntersectionObserver' in window) {
+            let faqVisible = false;
+            let footerVisible = false;
+
+            function updateStickyCta() {
+                if (faqVisible && !footerVisible) {
+                    stickyCta.classList.add('show');
+                } else {
+                    stickyCta.classList.remove('show');
+                }
+            }
+
+            if (faqEl) {
+                const faqObs = new IntersectionObserver(
+                    (entries) => {
+                        faqVisible = entries[0].isIntersecting;
+                        updateStickyCta();
+                    },
+                    { threshold: 0.35 }
+                );
+                faqObs.observe(faqEl);
+            }
+
+            if (footerEl) {
+                const footerObs = new IntersectionObserver(
+                    (entries) => {
+                        footerVisible = entries[0].isIntersecting;
+                        updateStickyCta();
+                    },
+                    { threshold: 0.01 }
+                );
+                footerObs.observe(footerEl);
+            }
         }
     </script>
  
@@ -1523,7 +1527,6 @@
         let t = 0;
         let mouse = { x: -9999, y: -9999 };
  
-        // --- Nodes (partículas 3D) ---
         const NODE_COUNT = 70;
         let nodes = [];
  
@@ -1556,7 +1559,6 @@
             };
         }
  
-        // --- Grid perspectiva ---
         function drawGrid() {
             const horizon = H * 0.42;
             const vp = { x: W / 2, y: horizon };
@@ -1566,7 +1568,6 @@
  
             ctx.save();
  
-            // Linhas verticais (convergem ao ponto de fuga)
             for (let i = 0; i <= COLS; i++) {
                 const xFrac = i / COLS;
                 const xBottom = W * xFrac;
@@ -1579,16 +1580,13 @@
                 ctx.stroke();
             }
  
-            // Linhas horizontais (paralelas, se movem para baixo)
             for (let j = 0; j <= ROWS; j++) {
                 const yFrac = j / ROWS;
-                // perspectiva: comprimidas no topo, espaçadas na base
                 const perspective = Math.pow(yFrac, 2.2);
                 const y = horizon + (H - horizon) * perspective + speed;
                 if (y > H) continue;
                 if (y < horizon) continue;
  
-                // largura da linha nesse ponto perspectivo
                 const alpha = 0.02 + 0.055 * perspective;
                 const xLeft  = vp.x - (vp.x) * perspective;
                 const xRight = vp.x + (W - vp.x) * perspective;
@@ -1601,7 +1599,6 @@
                 ctx.stroke();
             }
  
-            // Brilho no horizonte
             const horizGrad = ctx.createLinearGradient(0, horizon - 40, 0, horizon + 30);
             horizGrad.addColorStop(0, 'rgba(0,255,65,0)');
             horizGrad.addColorStop(0.5, 'rgba(0,255,65,0.06)');
@@ -1612,7 +1609,6 @@
             ctx.restore();
         }
  
-        // --- Hexágonos flutuantes ---
         const HEX_COUNT = 14;
         const hexes = Array.from({ length: HEX_COUNT }, () => ({
             x: randRange(0, 1),
@@ -1643,16 +1639,13 @@
                 if (h.y < -0.15) { h.y = 1.1; h.x = randRange(0, 1); }
                 const pulse = 0.5 + 0.5 * Math.sin(t * 0.02 + h.phase);
                 drawHex(h.x * W, h.y * H, h.size * (0.9 + pulse * 0.2), h.alpha * (0.6 + pulse * 0.4));
-                // inner hex
                 drawHex(h.x * W, h.y * H, h.size * 0.5 * (0.9 + pulse * 0.2), h.alpha * 0.5 * (0.6 + pulse * 0.4));
             });
         }
  
-        // --- Partículas 3D com conexões ---
         const MAX_DIST = 150;
  
         function drawNodes() {
-            // Atualizar posições
             nodes.forEach(n => {
                 n.x += n.vx; n.y += n.vy; n.z += n.vz;
                 if (n.x < 0 || n.x > W) n.vx *= -1;
@@ -1660,11 +1653,9 @@
                 if (n.z < 60 || n.z > 500) n.vz *= -1;
             });
  
-            // Projetar e ordenar por Z
             const projected = nodes.map(n => ({ ...project(n), node: n }));
             const sorted = [...projected].sort((a, b) => b.node.z - a.node.z);
  
-            // Conexões
             for (let i = 0; i < sorted.length; i++) {
                 for (let j = i + 1; j < sorted.length; j++) {
                     const a = sorted[i], b = sorted[j];
@@ -1682,12 +1673,10 @@
                 }
             }
  
-            // Nós
             sorted.forEach(({ sx, sy, scale, node }) => {
                 const r = node.r * scale * 2.5;
                 const alpha = 0.3 + scale * 0.7;
  
-                // Glow
                 const grd = ctx.createRadialGradient(sx, sy, 0, sx, sy, r * 5);
                 grd.addColorStop(0, `rgba(0,255,65,${alpha * 0.45})`);
                 grd.addColorStop(1, 'rgba(0,255,65,0)');
@@ -1696,14 +1685,12 @@
                 ctx.fillStyle = grd;
                 ctx.fill();
  
-                // Ponto
                 ctx.beginPath();
                 ctx.arc(sx, sy, r, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(0,255,65,${alpha})`;
                 ctx.fill();
             });
  
-            // Conexões com mouse
             nodes.forEach(n => {
                 const { sx, sy } = project(n);
                 const dx = sx - mouse.x, dy = sy - mouse.y;
@@ -1720,7 +1707,6 @@
             });
         }
  
-        // --- Scanlines sutis ---
         function drawScanlines() {
             ctx.save();
             for (let y = 0; y < H; y += 4) {
@@ -1730,7 +1716,6 @@
             ctx.restore();
         }
  
-        // --- Vinheta ---
         function drawVignette() {
             const vgrd = ctx.createRadialGradient(W/2, H/2, H*0.3, W/2, H/2, H*0.85);
             vgrd.addColorStop(0, 'rgba(0,0,0,0)');
@@ -1739,12 +1724,11 @@
             ctx.fillRect(0, 0, W, H);
         }
  
-        // --- Loop principal ---
         function draw() {
             t++;
- 
-            // Fundo base
-            ctx.fillStyle = 'rgba(10,10,10,0.18)';
+
+            // ALTERADO: fundo mais escuro (era 0.18, agora 0.55)
+            ctx.fillStyle = 'rgba(10,10,10,0.55)';
             ctx.fillRect(0, 0, W, H);
  
             drawGrid();
@@ -1767,4 +1751,3 @@
     </script>
 </body>
 </html>
- 
